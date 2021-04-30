@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Speech</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Speech" />
+    <link rel="stylesheet" href="/css/style.min.css" />
+</head>
+
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <div class="wrapper">
+            <section class="demo">
+                <h3 class="demo__title">Попробуйте Speech API</h3>
+                <div class="demo__tab-buttons">
+                    <div class="demo__tab-wrapper"><button class="demo__button active" data-id="synthesis">Синтез речи</button><button class="demo__button" data-id="recognition">Распознание речи</button></div>
+                </div>
+                <div class="demo__content">
+                    <div class="synthesis" id="synthesis"><textarea class="synthesis__textarea" id="synthesis-text"></textarea>
+                        <div class="synthesis__settings">
+                            <div class="synthesis__setting setting">
+                                <div class="setting__title">Темп</div><input class="setting__value" type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+                            </div>
+                            <div class="synthesis__setting">
+                                <div class="setting__title">Диапазон</div><input class="setting__value" type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+                            </div>
+                            <div class="synthesis__setting">
+                                <div class="setting__title">Голос</div><select class="setting__value" id="voice"></select>
+                            </div><button class="synthesis__button" id="synthesis-button">Синтезировать речь</button>
+                        </div>
+                    </div>
+                    <div class="hide recognition" id="recognition"><button class="recognition__button" id="recognition-button">Распознать речь</button>
+                        <div class="recognition__result" id="recognition-result">
+                            <h6 class="recognition__result-title">Результат:</h6>
+                            <p class="recognition__text" id="recognition-text">123123123</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="/js/index.min.js"></script>
+</body>
+
+</html>
